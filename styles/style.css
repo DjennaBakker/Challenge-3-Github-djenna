@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+*, 
+*:before,
+*:after{
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+ 	font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background-color: black;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+        "head  head"
+        "area1  area1"
+        "area2  area2"
+        "area3  area3"; 
+}
+
+.header{
+  grid-area: head;
+} 
+
+.area1{
+  grid-area: area1;
+  background-color: #404040;
+}
+
+.area2{
+  grid-area: area2;
+  background-color: #404040;
+}
+
+.area3{
+  grid-area: area3;
+  background-color: #404040;
+}
+
+
+.header, .area1, .area2, .area3{
+  padding: 0.2em 1em;
+  margin: 0.2em;
+  text-align: center;
+}
+
+.area1, .area2, .area3{
+	 padding-bottom: 5%;
+}
+
+header img{
+	max-width: 150px;
+	height: auto;
+}
+
+p{
+	background: grey;
+	/*width: 50%;*/
+}
+
+/*Tablet*/
+@media only screen and (min-width: 601px) and (max-width: 1023px){
+	body{
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+
+	  grid-template-areas: 
+	        "head  head"
+	        "area1  area2"
+	        "area3  area3"; 
+	}
+}
+
+/*Laptop*/
+@media only screen and (min-width: 1024px) and (max-width: 1599px){
+	body{
+	  display: grid;
+	  grid-template-columns: 1fr 1fr 1fr;
+
+	  grid-template-areas: 
+	        "head  head  head"
+	        "area1  area2  area3"; 
+	}
+}
+
+/*Grote desktop*/
+@media only screen and (min-width: 1600px) and (max-width: 2600px){
+	body{
+	  display: grid;
+	  grid-template-columns: 1fr 1fr 1fr;
+
+	  grid-template-areas: 
+	        "head  head  head"
+	        "area1  area2  area3"; 
+	}
+}
+
+
+
+
