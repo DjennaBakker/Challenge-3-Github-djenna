@@ -19,6 +19,7 @@ body{
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
         "head  head"
+        "titel  titel"
         "area1  area1"
         "area2  area2"
         "area3  area3"; 
@@ -28,21 +29,28 @@ body{
   grid-area: head;
 } 
 
+.titel{
+	grid-area: titel;
+	text-align: center;
+}
+
 .area1{
   grid-area: area1;
   background-color: #404040;
+  background-image: url(../images/sky.gif);
 }
 
 .area2{
   grid-area: area2;
   background-color: #404040;
+  /*background-image: url(../images/);*/
 }
 
 .area3{
   grid-area: area3;
   background-color: #404040;
+  /*background-image: url(../images/lucht.jpg);*/
 }
-
 
 .header, .area1, .area2, .area3{
   padding: 0.2em 1em;
@@ -51,7 +59,7 @@ body{
 }
 
 .area1, .area2, .area3{
-	 padding-bottom: 5%;
+	padding-bottom: 5%;
 }
 
 header img{
@@ -59,9 +67,8 @@ header img{
 	height: auto;
 }
 
-p{
-	background: grey;
-	/*width: 50%;*/
+h1{
+	background: black;
 }
 
 /*Tablet*/
@@ -69,9 +76,9 @@ p{
 	body{
 	  display: grid;
 	  grid-template-columns: 1fr 1fr;
-
 	  grid-template-areas: 
 	        "head  head"
+	        "titel  titel"
 	        "area1  area2"
 	        "area3  area3"; 
 	}
@@ -82,9 +89,9 @@ p{
 	body{
 	  display: grid;
 	  grid-template-columns: 1fr 1fr 1fr;
-
 	  grid-template-areas: 
 	        "head  head  head"
+	        "titel  titel  titel"
 	        "area1  area2  area3"; 
 	}
 }
@@ -94,13 +101,9 @@ p{
 	body{
 	  display: grid;
 	  grid-template-columns: 1fr 1fr 1fr;
-
 	  grid-template-areas: 
 	        "head  head  head"
+	        "titel  titel  titel"
 	        "area1  area2  area3"; 
 	}
 }
-
-
-
-

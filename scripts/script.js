@@ -3,7 +3,7 @@ function getAPIdata() {
 
 	var url = "https://api.openweathermap.org/data/2.5/weather";
 	var apiKey ="e7a75c6f939d56f3eea3ec4334e096c0";
-	var city = "rotterdam,nl";
+	var city = "amsterdam,nl";
 
 	var request = url + "?" + "appid=" + apiKey + "&" + "q=" + city;
 	
@@ -38,7 +38,6 @@ function onAPISucces(response) {
 	var weatherBox = document.getElementById('weather');
 	weatherBox.innerHTML = place + '<br>' +degC + "&#176;C <br>" + type;
 
-	var iconUrl = 'http://openweathermap.org/img/w/'+weatherList[i].weather[0].icon+'.png';
 }
 
 function onAPIError(error) {
@@ -49,7 +48,3 @@ function onAPIError(error) {
 
 // init data stream
 getAPIdata();
-
-/*----------Restaurants------------*/
-
-
