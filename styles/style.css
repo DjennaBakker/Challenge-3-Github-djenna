@@ -21,8 +21,7 @@ body{
         "head  head"
         "titel  titel"
         "area1  area1"
-        "area2  area2"
-        "area3  area3"; 
+        "area2  area2"; 
 }
 
 .header{
@@ -38,27 +37,29 @@ body{
   grid-area: area1;
   background-color: #404040;
   background-image: url(../images/sky.gif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .area2{
   grid-area: area2;
   background-color: #404040;
-  /*background-image: url(../images/);*/
+  background-image: url(../images/ramen.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
-.area3{
-  grid-area: area3;
-  background-color: #404040;
-  /*background-image: url(../images/lucht.jpg);*/
-}
-
-.header, .area1, .area2, .area3{
+.header, .area1, .area2{
   padding: 0.2em 1em;
   margin: 0.2em;
   text-align: center;
 }
 
-.area1, .area2, .area3{
+.area1, .area2{
 	padding-bottom: 5%;
 }
 
@@ -71,6 +72,19 @@ h1{
 	background: black;
 }
 
+p{
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.8);
+}
+
+#weather {
+	font-size: 1.4em;
+}
+
+.name{
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
 /*Tablet*/
 @media only screen and (min-width: 601px) and (max-width: 1023px){
 	body{
@@ -79,8 +93,31 @@ h1{
 	  grid-template-areas: 
 	        "head  head"
 	        "titel  titel"
-	        "area1  area2"
-	        "area3  area3"; 
+	        "area1  area2"; 
+	}
+	.titel h1{
+		font-size: 2em;
+	}
+
+	.area1 h1{
+		font-size: 1.5em;
+	}
+
+	.area2 h1{
+		font-size: 1.5em;
+	}
+
+	#weather {
+		font-size: 2.3em;
+	}
+
+	#APItokyo {
+		font-size: 1.6em;
+	}
+
+	.name{
+		font-size: 1.6em;
+		font-weight: bold;
 	}
 }
 
@@ -88,11 +125,47 @@ h1{
 @media only screen and (min-width: 1024px) and (max-width: 1599px){
 	body{
 	  display: grid;
-	  grid-template-columns: 1fr 1fr 1fr;
+	  grid-template-columns: 1fr 1fr;
 	  grid-template-areas: 
-	        "head  head  head"
-	        "titel  titel  titel"
-	        "area1  area2  area3"; 
+	        "head  head"
+	        "titel  titel"
+	        "area1  area1"
+	        "area2  area2"; 
+	}
+
+	.area2{
+	  grid-area: area2;
+	  background-color: #404040;
+	  background-image: url(../images/ramen.jpg);
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-position: top;
+	  background-size: cover;
+	}
+
+	.titel h1{
+		font-size: 2.2em;
+	}
+
+	.area1 h1{
+		font-size: 1.8em;
+	}
+
+	.area2 h1{
+		font-size: 1.8em;
+	}
+
+	#weather {
+		font-size: 2.5em;
+	}
+
+	#APItokyo {
+		font-size: 1.6em;
+	}
+
+	.name{
+		font-size: 1.6em;
+		font-weight: bold;
 	}
 }
 
@@ -100,10 +173,50 @@ h1{
 @media only screen and (min-width: 1600px) and (max-width: 2600px){
 	body{
 	  display: grid;
-	  grid-template-columns: 1fr 1fr 1fr;
+	  grid-template-columns: 1fr 1fr;
 	  grid-template-areas: 
-	        "head  head  head"
-	        "titel  titel  titel"
-	        "area1  area2  area3"; 
+	        "head  head"
+	        "titel  titel"
+	        "area1  area1"
+	        "area2  area2";
+	}
+
+	.area2{
+	  grid-area: area2;
+	  background-color: #404040;
+	  background-image: url(../images/ramen.jpg);
+	  background-repeat: no-repeat;
+	  background-attachment: fixed;
+	  background-position: top;
+	  background-size: cover;
+	}
+
+	.titel h1{
+		font-size: 2.4em;
+	}
+
+	#weather {
+		font-size: 2.7em;
+	}
+
+	.area1 h1{
+		font-size: 2.0em;
+	}
+
+	.area2 h1{
+		font-size: 2.0em;
+	}
+
+	#APItokyo {
+		font-size: 1.6em;
+	}
+
+	.name{
+		font-size: 1.8em;
+		font-weight: bold;
+	}
+
+	.snippet{
+		font-size: 1.8em;
 	}
 }
